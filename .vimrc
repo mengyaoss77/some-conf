@@ -101,3 +101,4 @@ autocmd BufNewFile * normal G
 "
 " Vim-go 
 let g:go_template_autocreate = 0
+let g:go_fmt_command = "goimports"
