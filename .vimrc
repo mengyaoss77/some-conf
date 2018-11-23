@@ -1,4 +1,3 @@
-" colorscheme elflord
 syntax on
 set nocompatible              " be iMproved, required
 "set backspace=2
@@ -17,9 +16,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/a.vim'
 
+" To support Golang Clang
+" $ go get -u github.com/mdempsky/gocode
+" $ ./install.py --go-completer --clang-completer
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'ludovicchabant/vim-gutentags'	" Auto tags
 Plugin 'fatih/vim-go'
+Plugin 'fatih/molokai'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -102,3 +105,13 @@ autocmd BufNewFile * normal G
 " Vim-go 
 let g:go_template_autocreate = 0
 let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+
+
+" theme
+let g:rehash256 = 1
+let g:molokai_original = 1
+colorscheme molokai
