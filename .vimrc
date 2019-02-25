@@ -18,9 +18,13 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " $ go get -u github.com/mdempsky/gocode
 " $ ./install.py --go-completer --clang-completer
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'ludovicchabant/vim-gutentags'	" Auto tags
 Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'StanAngeloff/php.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,7 +55,12 @@ set shiftround
 set hlsearch
 set incsearch
 
-set tags=./.tags;,.tags
+set tags=./tags;,tags
+
+vmap <F2> "+y
+
+autocmd Filetype php set expandtab
+autocmd Filetype python set expandtab
 
 
 " Auto compelte
