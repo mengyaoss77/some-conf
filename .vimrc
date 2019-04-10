@@ -3,43 +3,21 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-scripts/a.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'vim-scripts/a.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
+Plug 'ludovicchabant/vim-gutentags'	" Auto tags
+Plug 'fatih/vim-go'
+Plug 'fatih/molokai'
+Plug 'Chiel92/vim-autoformat'
+"Plug 'junegunn/vim-easy-align'
 
-" To support Golang & Clang
-" $ go get -u github.com/mdempsky/gocode
-" $ ./install.py --go-completer --clang-completer
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ludovicchabant/vim-gutentags'	" Auto tags
-Plugin 'fatih/vim-go'
-Plugin 'fatih/molokai'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'StanAngeloff/php.vim'
-Plugin '2072/PHP-Indenting-for-VIm'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
+
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
 
 set backspace=2
 set laststatus=2 " 底栏文件信息
@@ -57,7 +35,13 @@ set incsearch
 
 set tags=./tags;,tags
 
-vmap <F2> "+y
+set noswapfile
+
+
+" Mapping
+" Yank to System Clipboard
+vmap <F2> "+y 
+noremap <F3> :Autoformat<CR>
 
 autocmd Filetype php set expandtab
 autocmd Filetype python set expandtab
@@ -80,9 +64,13 @@ let g:go_fmt_command = "goimports"
 "let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 "let g:go_highlight_function_calls = 1
+let g:go_def_mode='gopls'
+
 
 
 " theme
 let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme molokai
+
+let g:ycm_server_python_interpreter='/home/solanin/vpython/bin/python'
