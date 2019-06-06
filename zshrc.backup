@@ -99,13 +99,11 @@ source ~/apps/z.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # 翻墙
-alias startss="nohup shadowsocks-local -c ~/apps/ss_cccat_go.json &!"
-
-alias killss="kill -9 `pidof shadowsocks-local`"
+alias startss="~/apps/ssgo.sh"
+alias startv2ray="/home/solanin/apps/v2ray-linux-64/v2ray -config /home/solanin/apps/v2ray-linux-64/config.json"
 
 alias fuckgfw="export http_proxy=http://127.0.0.1:8118 https_proxy=http://127.0.0.1:8118" 
 alias unfuckgfw="unset http_proxy https_proxy"
-
 
 export PATH=$PATH:/home/solanin/go/bin:/usr/local/go/bin:/home/solanin/.local/bin:/home/solanin/apps
 

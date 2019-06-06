@@ -6,16 +6,16 @@ filetype off                  " required
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/a.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Yggdroot/LeaderF'
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'	" Auto tags
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'tag': 'v1.20' }
 Plug 'fatih/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdcommenter'
-"Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -43,7 +43,8 @@ set noswapfile
 " Mapping
 " Yank to System Clipboard
 vmap <F2> "+y 
-noremap <F3> :Autoformat<CR>
+vmap <F3> :Autoformat<CR>
+nmap <C-P> :Leaderf file<CR>
 
 autocmd Filetype php set expandtab
 autocmd Filetype python set expandtab
@@ -66,8 +67,6 @@ let g:go_fmt_command = 'goimports'
 "let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 "let g:go_highlight_function_calls = 1
-let g:go_def_mode = 'gopls'
-
 
 " theme
 let g:rehash256 = 1
