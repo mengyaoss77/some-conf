@@ -16,6 +16,7 @@ Plug 'fatih/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -45,6 +46,8 @@ set noswapfile
 vmap <F2> "+y 
 vmap <F3> :Autoformat<CR>
 nmap <C-P> :Leaderf file<CR>
+map <C-n> :NERDTreeToggle<CR>
+
 
 autocmd Filetype php set expandtab
 autocmd Filetype python set expandtab

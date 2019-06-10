@@ -113,7 +113,3 @@ alias findexp=/home/solanin/apps/findexp.sh
 alias jumper="expect /home/solanin/.ssh/jumper.expect"
 
 alias vpy="source /home/solanin/vpython/bin/activate"
-
-# GOLANG
-export GO15VENDOREXPERIMENT=1
-
