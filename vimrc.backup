@@ -1,22 +1,20 @@
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/a.vim'
-" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/LeaderF'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'	" Auto tags
-Plug 'fatih/vim-go', { 'tag': 'v1.20' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'fatih/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -75,5 +73,9 @@ let g:go_highlight_functions = 1
 let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme gruvbox
+
+" nerdcommenter
+let g:NERDSpaceDelims = 1
+
 
 "let g:ycm_server_python_interpreter='/home/solanin/vpython/bin/python'

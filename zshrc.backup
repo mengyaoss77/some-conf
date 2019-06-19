@@ -100,7 +100,7 @@ source ~/apps/z.sh
 
 # 翻墙
 alias startss="~/apps/ssgo.sh"
-alias startv2ray="/home/solanin/apps/v2ray-linux-64/v2ray -config /home/solanin/apps/v2ray-linux-64/config.json"
+alias startv2ray="mv nohup.out nohup.out.1 && nohup /home/solanin/apps/v2ray-linux-64/v2ray -config /home/solanin/apps/v2ray-linux-64/config.json &!"
 
 alias fuckgfw="export http_proxy=http://127.0.0.1:8118 https_proxy=http://127.0.0.1:8118" 
 alias unfuckgfw="unset http_proxy https_proxy"
@@ -113,3 +113,5 @@ alias findexp=/home/solanin/apps/findexp.sh
 alias jumper="expect /home/solanin/.ssh/jumper.expect"
 
 alias vpy="source /home/solanin/vpython/bin/activate"
+
+alias nowts="date +%s"
