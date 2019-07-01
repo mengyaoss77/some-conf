@@ -24,6 +24,7 @@ set backspace=2
 set laststatus=2 " 底栏文件信息
 set showcmd
 set number " 行号
+set relativenumber
 
 set autoindent " 自动缩进
 set smartindent
