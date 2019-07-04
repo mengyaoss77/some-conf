@@ -45,7 +45,7 @@ set noswapfile
 vmap <F2> "+y 
 vmap <F3> :Autoformat<CR>
 nmap <C-P> :Leaderf file<CR>
-map <C-n> :NERDTreeToggle<CR>
+nmap <leader><C-P> :Leaderf tag<CR>
 
 
 autocmd Filetype php set expandtab
@@ -74,6 +74,7 @@ let g:go_highlight_functions = 1
 let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme gruvbox
+set background=dark
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
