@@ -11,8 +11,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'	" Auto tags
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'fatih/molokai'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdcommenter'
 
@@ -71,8 +70,7 @@ let g:go_highlight_functions = 1
 "let g:go_highlight_function_calls = 1
 
 " theme
-let g:rehash256 = 1
-let g:molokai_original = 1
+set termguicolors
 colorscheme gruvbox
 set background=dark
 
