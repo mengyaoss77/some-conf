@@ -45,6 +45,7 @@ vmap <F2> "+y
 vmap <F3> :Autoformat<CR>
 nmap <C-P> :Leaderf file<CR>
 nmap <leader><C-P> :Leaderf tag<CR>
+imap <C-D> // TODO TODOx: 
 
 
 autocmd Filetype php set expandtab
