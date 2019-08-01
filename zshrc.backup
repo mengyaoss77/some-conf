@@ -106,7 +106,7 @@ alias renzhev2ray="mv nohup.out nohup.out.1 && nohup /home/solanin/apps/v2ray-li
 alias fuckgfw="export http_proxy=http://127.0.0.1:8118 https_proxy=http://127.0.0.1:8118" 
 alias unfuckgfw="unset http_proxy https_proxy"
 
-export PATH=$PATH:/home/solanin/go/bin:/usr/local/go/bin:/home/solanin/.local/bin:/home/solanin/apps:/opt/android-sdk/platform-tools
+export PATH=$PATH:/home/solanin/go/bin:/usr/local/go/bin:/home/solanin/.local/bin:/home/solanin/apps
 
 # alias
 alias findexp=/home/solanin/apps/findexp.sh
@@ -118,3 +118,7 @@ alias vpy="source /home/solanin/vpython/bin/activate"
 alias nowts="date +%s"
 
 alias gst="git status && findexp TODOx "
+
+# 相同目录打开tab
+source /etc/profile.d/vte.sh
+

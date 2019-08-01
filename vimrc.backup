@@ -21,6 +21,7 @@ filetype plugin indent on    " required
 
 set backspace=2
 set laststatus=2 " 底栏文件信息
+set statusline+=%F
 set showcmd
 set number " 行号
 set relativenumber
