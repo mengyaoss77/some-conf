@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/solanin/.oh-my-zsh"
+export ZSH="/home/mengyao/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,25 +100,21 @@ source ~/apps/z.sh
 
 # 翻墙
 alias startss="~/apps/ssgo.sh"
-alias startv2ray="mv nohup.out nohup.out.1 && nohup /home/solanin/apps/v2ray-linux-64/v2ray -config /home/solanin/apps/v2ray-linux-64/config.json &!"
-alias renzhev2ray="mv nohup.out nohup.out.1 && nohup /home/solanin/apps/v2ray-linux-64/v2ray -config /home/solanin/apps/v2ray-linux-64/renzhe-config.json &!"
+alias startv2ray="mv nohup.out nohup.out.1 && nohup /home/mengyao/apps/v2ray-linux-64/v2ray -config /home/mengyao/apps/v2ray-linux-64/config.json &!"
+alias renzhev2ray="mv nohup.out nohup.out.1 && nohup /home/mengyao/apps/v2ray-linux-64/v2ray -config /home/mengyao/apps/v2ray-linux-64/renzhe-config.json &!"
 
 alias fuckgfw="export http_proxy=http://127.0.0.1:8118 https_proxy=http://127.0.0.1:8118" 
 alias unfuckgfw="unset http_proxy https_proxy"
 
-export PATH=$PATH:/home/solanin/go/bin:/usr/local/go/bin:/home/solanin/.local/bin:/home/solanin/apps
+export PATH=$PATH:/home/mengyao/go/bin:/usr/local/go/bin:/home/mengyao/.local/bin:/home/mengyao/apps:/home/mengyao/apps/bin
 
 # alias
-alias findexp=/home/solanin/apps/findexp.sh
+alias findexp=/home/mengyao/apps/findexp.sh
 
-alias jumper="expect /home/solanin/.ssh/jumper.expect"
+alias jumper="expect /home/mengyao/.ssh/jumper.expect"
 
-alias vpy="source /home/solanin/vpython/bin/activate"
+alias vpy="source /home/mengyao/vpython/bin/activate"
 
 alias nowts="date +%s"
 
 alias gst="git status && findexp TODOx "
-
-# 相同目录打开tab
-source /etc/profile.d/vte.sh
-

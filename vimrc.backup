@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-scripts/a.vim'
 Plug 'Yggdroot/LeaderF'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
 Plug 'ludovicchabant/vim-gutentags'	" Auto tags
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -16,17 +15,19 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
 filetype plugin indent on    " required
 
-set backspace=2
+set backspace=2 " 退格
 set laststatus=2 " 底栏文件信息
-set statusline+=%F
+set statusline+=%F " 完整路径名
 set showcmd
 set number " 行号
-set relativenumber
+set relativenumber " 相对行数
 
 set autoindent " 自动缩进
 set smartindent
@@ -49,7 +50,9 @@ vmap <F3> :Autoformat<CR>
 nmap <C-P> :Leaderf file<CR>
 nmap <leader><C-P> :Leaderf tag<CR>
 imap <C-D> // TODO TODOx: 
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeFind<CR>
+
+nmap <silent> gr <Plug>(coc-references)
 
 autocmd Filetype php set expandtab
 autocmd Filetype python set expandtab
@@ -63,7 +66,8 @@ autocmd Filetype python set expandtab
 " t : tag completion
 " current and included files
 " set complete=.,w,b,u,t,i
-
+"
+let g:formatter_yapf_style = 'pep8'
 
 " Vim-go 
 let g:go_template_autocreate = 0
@@ -72,6 +76,7 @@ let g:go_fmt_command = 'goimports'
 "let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 "let g:go_highlight_function_calls = 1
+let g:go_code_completion_enabled = 0
 
 " theme
 set termguicolors
