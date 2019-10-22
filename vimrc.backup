@@ -46,13 +46,24 @@ set noswapfile
 " Mapping
 " Yank to System Clipboard
 vmap <F2> "+y 
-vmap <F3> :Autoformat<CR>
+" vmap <F3> :Autoformat<CR>
+map <F3> :Autoformat<CR>
 nmap <C-P> :Leaderf file<CR>
 nmap <leader><C-P> :Leaderf tag<CR>
 imap <C-D> // TODO TODOx: 
 nmap <C-n> :NERDTreeFind<CR>
 
 nmap <silent> gr <Plug>(coc-references)
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
 autocmd Filetype php set expandtab
 autocmd Filetype python set expandtab
@@ -72,11 +83,8 @@ let g:formatter_yapf_style = 'pep8'
 " Vim-go 
 let g:go_template_autocreate = 0
 let g:go_fmt_command = 'goimports'
-"let g:go_highlight_types = 1
-"let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
-"let g:go_highlight_function_calls = 1
-let g:go_code_completion_enabled = 0
+" let g:go_code_completion_enabled = 1
 
 " theme
 set termguicolors
